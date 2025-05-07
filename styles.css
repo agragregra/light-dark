@@ -1,0 +1,32 @@
+:root {
+  --color-accent: orange;
+  --border-radius: 4px;
+  --gutter: 20px;
+
+  font-family: sans-serif;
+}
+
+.modes {
+  margin: var(--gutter) 0;
+}
+
+[data-mode] {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: calc(var(--border-radius) / 2);
+  padding: .4rem .9rem;
+}
+
+[data-mode].active {
+  color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.toggler-light button::before {
+  content: '🔅';
+}
+
+.toggler-dark button::before {
+  content: '🌙';
+}
