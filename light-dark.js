@@ -1,5 +1,5 @@
-const html = document.documentElement,
-  mode = localStorage.getItem('mode') || 'auto';
+const html = document.documentElement;
+const mode = localStorage.getItem('mode') || 'auto';
 const getPreferredMode = () => matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 const switchMode = (mode) => {
